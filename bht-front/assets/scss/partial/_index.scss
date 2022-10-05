@@ -1,0 +1,442 @@
+// Slider Scss
+#slider {
+  .slider-img {
+    position: relative;
+    vertical-align: middle;
+    height: 100vh;
+    min-height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .slider-content {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .slider-title {
+      font-size: 2.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      line-height: 69px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .slider-subtitle {
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 18px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .slider-btn {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 50px;
+      background-color: var(--primary);
+      color: #fff;
+      border-radius: 50px;
+      padding: 0 1.5rem;
+
+      .slider-btn-icon {
+        margin-right: 0.5rem;
+      }
+      &:hover {
+        background-color: var(--secondary);
+      }
+    }
+  }
+}
+
+// Certificate
+#certificate {
+  background: #fff;
+  overflow: hidden;
+  padding: 3rem 0;
+  .title {
+    h2 {
+      color: #757575;
+      font-size: 0.875rem !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 1.25rem 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .owl-carousel {
+    padding: 0.625rem 0;
+    .item {
+      display: inline-block;
+      width: auto;
+      padding: 0.625rem 1.5rem;
+      margin-right: 0.625rem;
+    }
+  }
+}
+
+// Foreign Tour and Group Tour
+#foreign-tours,
+#group-tours {
+  background-color: #efefef;
+  padding: 1.25rem;
+}
+
+// Places
+#places {
+  background-color: #efefef;
+  padding: 1.25rem 0;
+
+  .places {
+    .place-ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 0;
+        .place-item {
+          position: relative;
+          .image {
+            height: auto;
+            width: 100%;
+            filter: brightness(85%);
+            transition: all 0.4s;
+          }
+          .title {
+            position: absolute;
+            top: 45%;
+            color: #fff;
+            font-size: 1.125rem;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            text-align: center;
+            text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            text-transform: uppercase;
+            margin: 0;
+            width: 100%;
+          }
+          .temperature {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            img {
+              width: 15px;
+              margin-right: .5rem;
+            }
+            p {
+              color: #fff;
+              display: inline-block;
+              font-size: 22px;
+              margin: 0;
+
+            }
+          }
+        }
+        &:hover {
+          .image {
+            filter: brightness(40%);
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Cruise
+#cruise {
+  background-color: #efefef;
+  padding: 2.5rem 0 1.25rem 0;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    .swiper-button-next {
+      color: #fff !important;
+      margin-right: 5rem;
+      &::after {
+        content: "" !important;
+      }
+    }
+    .swiper-button-prev {
+      color: #fff !important;
+      margin-left: 5rem;
+      &::after {
+        content: "" !important;
+      }
+    }
+    .swiper-wrapper {
+      margin: 0;
+      padding: 0;
+      .swiper-slide {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        padding: 0;
+        margin: 0;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        .image {
+          img {
+            width: 100vw;
+            height: 442px;
+            object-fit: cover;
+            vertical-align: middle;
+            filter: brightness(75%);
+          }
+        }
+
+        .info {
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          top: 30%;
+
+          .price {
+            color: #fff;
+            font-size: 0.875rem;
+            padding: 5px 0;
+            text-align: center;
+            text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            text-transform: uppercase;
+            width: 100%;
+          }
+          .title {
+            color: #fff;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            text-align: center;
+            text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            text-transform: uppercase;
+            width: 100%;
+          }
+          .date {
+            color: #fff;
+            display: inline-block;
+            font-size: 10px;
+            line-height: 35px;
+            text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            text-transform: uppercase;
+          }
+          .subtitle {
+            color: #fff;
+            font-size: 12px;
+            padding: 10px 15%;
+            text-align: center;
+            text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Featured
+#featured {
+  background-color: #efefef;
+  padding: 1.25rem 0;
+  .item {
+    // height: 100%;
+    height: 325px;
+    .tours-img {
+      height: 100%;
+    }
+    .tour-content {
+      align-items: flex-start !important;
+      padding: 2rem;
+
+      .rating {
+        display: flex;
+        img {
+          margin-right: 0.3rem;
+        }
+      }
+      .title {
+        text-align: start;
+      }
+      .desc {
+        .upper {
+          color: #fff;
+          letter-spacing: 1px;
+          padding: 5px 0;
+          text-align: left;
+          text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+          text-transform: uppercase;
+          width: 100%;
+
+          .number {
+            font-size: 2rem;
+          }
+          .text {
+            font-size: 1.125rem;
+          }
+          .seperator {
+            font-size: 1.5rem;
+            border-left: 1px solid #fff;
+            width: 1px;
+            margin: 0 5px 0 10px;
+          }
+        }
+        .lower {
+          color: #fff;
+          font-size: 12px;
+          padding: 10px 0;
+          text-align: left;
+          text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+          width: 100%;
+        }
+      }
+      .bottom {
+        .more-detailed {
+          margin-left: 3rem;
+        }
+      }
+    }
+  }
+  .owl-nav {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      background: #e79623;
+      border: 4px solid #efefef;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      height: 34px;
+      margin-top: -17px;
+      padding-bottom: 5px;
+      padding-top: -24px;
+      pointer-events: auto;
+      position: absolute;
+      top: 50%;
+      transition: background-color 0.25s ease-in-out 0s;
+      width: 34px;
+      margin-left: -1rem;
+
+      img {
+        width: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #featured {
+    .featured-slider {
+      padding: 0 7.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 1199.98px) {
+  #cruise {
+    .image {
+      img {
+        height: 400px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  #cruise {
+    .image {
+      img {
+        height: 350px !important;
+      }
+    }
+    .info {
+      top: 25% !important;
+    }
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  #slider {
+    .slider-title {
+      font-size: 2rem !important;
+    }
+  }
+  #cruise {
+    .image {
+      img {
+        height: 300px !important;
+      }
+    }
+    .info {
+      top: 20% !important;
+      .title {
+        margin: 0 !important;
+      }
+      .date {
+        margin: 0 !important;
+      }
+    }
+  }
+  #featured {
+    .owl-nav {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  #slider {
+    .slider-title {
+      font-size: 1.2rem !important;
+      letter-spacing: 7px !important;
+      white-space: nowrap !important;
+      line-height: 60px !important;
+    }
+    .slider-subtitle {
+      font-size: .7rem !important;
+    }
+    .slider-btn {
+      padding: 0 1rem !important;
+      line-height: 40px !important;
+    }
+  }
+  #cruise {
+    .image {
+      img {
+        height: 250px !important;
+      }
+    }
+    .info {
+      top: 18% !important;
+      .subtitle {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 374.98px) {
+  #slider {
+    .slider-title {
+      font-size: 1rem !important;
+      letter-spacing: 5px !important;
+      line-height: 50px !important;
+    }
+    .slider-subtitle {
+      font-size: .6rem !important;
+    }
+  }
+}

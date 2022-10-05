@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Tours>
+
+    @foreach (var item in Model)
+   {
+            <a asp-action="detail" asp-controller="tour" asp-route-id="@item.Id">
+    <div class="row align-items-center" style="height:auto;width:100%; background-color:white; padding:.6rem; margin-top:.3rem; border-radius:10px;">
+        <div class="col-1">
+                <img style="width:30px; border-radius:5px" src="~/uploads/tour/@item.ImgUrl" alt="">
+
+        </div>
+        <div class="col-7">
+            <p class="m-0" style="color:var(--primary); font-size:14px;font-weight:500;">@item.Title</p>
+        </div>
+        <div class="col-2">
+            <span style="color:black">$@item.Price</span>
+        </div>
+    </div>
+            </a>
+   }

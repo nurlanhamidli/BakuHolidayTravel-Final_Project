@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Slaydlar";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+@model List<Slider>
+
+<div class="container">
+    <h1>Slaydlar</h1>
+    <a asp-action="create" class="btn btn-warning">Yeni Slayd</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Count</th>
+                <th scope="col">Slide</th>
+                <th scope="col">Başlıq</th>
+                <th scope="col">Təsvir</th>
+                <th scope="col">Url</th>
+                <th scope="col">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td><img style="width:100px; border-radius:0;" ; src="~/uploads/slider/@item.ImgUrl" /></td>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td>@item.Link</td>
+                    <td>@item.Type</td>
+                    <td><a asp-controller="Slide" asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Redaktə et</a> </td>
+                    <td><a asp-controller="Slide" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="slide" class="btn btn-danger delete-btn">Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

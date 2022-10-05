@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<ServiceAndAbout>
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/img-services.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">XİDMƏTLƏR</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title"><h1>XİDMƏTLƏRİMİZ</h1></div>
+            <div class="subtitle">
+                <p>
+                    Dünyanın bütün istiqamətlərinə turizmin bütün sahələri üzrə
+                    professional xidmətlər
+                </p>
+            </div>
+            <div class="row row-cols-md-1">
+                <div class="col">
+                    <div class="text">
+                        <p>
+                            Baku Holiday Travel” Turizm Şirkəti 2013-cü il 27 iyul
+                            tarixində Mədəniyyət və Turizm Nazirliyinin lisenziyası ilə
+                            fəaliyyətə başlamış və professional xidməti ilə qısa müddət
+                            ərzində müştərilərin rəğbətini qazanmışdır. Hal - hazırda
+                            Azərbaycanda və Dünyanın bir çox ölkələrinə Turizmin
+                            İstirahət, Biznes, Müalicəvi və digər sahələri üzrə təşkilində
+                            aktiv və inkişaf edən şirkət olaraq tanınıb.
+                            <br />
+                            <br />
+                            Baku Holiday Travel-in təmin etdiyi xidmətlərin müştərilər
+                            tərəfindən yüksək qiymətləndirilməsi, bizi işimizə daha
+                            məsuliyyətli yanaşmağa və peşəkar idarəçilyimizi artırmağa
+                            daha çox motivasiya yaradır. Bir sözlə, şirkətiniz və
+                            səyahətçiləriniz üçün ən peşəkar seçim Baku Holiday Travel-dir
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Services start -->
+    <section class="pages">
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2">
+                @foreach (var item in Model)
+                {
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="service" asp-action="detail" asp-route-id="@item.Id">
+                            <div class="img">
+                                <img src="~/uploads/page/@item.Icon" alt="" />
+                            </div>
+                            <div class="title">@item.Name</div>
+                            <div class="desc">
+                                @item.Title
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- Tours end -->
+</main>
+<!-- Main end -->
+

@@ -1,0 +1,107 @@
+﻿@model AzeVM
+@{
+    ViewData["Title"] = "Azərbaycan - Ölkə Daxili Turlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<!-- Main start -->
+<main>
+    <!-- Slider -->
+    <section id="az-slider">
+        <div id="carouselExampleControls"
+             class="carousel slide"
+             data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (var i = 0; i < Model.sliders.Count(); i++)
+                {
+                    if (Model.sliders[i].Type == 1)
+                    {
+                        if (count == 0)
+                        {
+                            <div class="carousel-item active">
+                                <img src="~/uploads/slider/@Model.sliders[i].ImgUrl"
+                         class="d-block w-100 slider-img"
+                         alt="..." />
+                                <div class="slider-content">
+                                    <h1 class="slider-title">@Model.sliders[i].Title</h1>
+                                    <p class="slider-subtitle">
+                                        @Model.sliders[i].Description
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="carousel-item">
+                                <img src="~/uploads/slider/@Model.sliders[i].ImgUrl"
+                         class="d-block w-100 slider-img"
+                         alt="..." />
+                                <div class="slider-content">
+                                    <h1 class="slider-title">@Model.sliders[i].Title</h1>
+                                    <p class="slider-subtitle">@Model.sliders[i].Description</p>
+                                </div>
+                            </div>
+                        }
+                        count++;
+                    }
+                }
+            </div>
+            <button class="carousel-control-prev h-25"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                    style="top: 40%">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <img src="~/assets/icon/arrow-left.png" alt="" />
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next h-25"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                    style="top: 40%">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <img src="~/assets/icon/arrow-right.png" alt="" />
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Slider end -->
+    <!-- Azerbaijan tours start -->
+    <section id="azerbaijan" class="az-tours">
+        <div class="container">
+            <div class="title"><h1>AZƏRBAYCANIN GƏZMƏLİ YERLƏRİ</h1></div>
+            <div class="subtitle">
+                <p>Baku Holiday Travel-dən ölkə daxili turlar</p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-3">
+                @foreach (var item in Model.Tours)
+                {
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="~/uploads/tour/@item.ImgUrl"
+                             class="card-img-top tours-img"
+                             alt="..." />
+                        <div class="tour-content">
+                            <h5 class="title">@item.Title</h5>
+                            <p class="price">qiymət: <span>$@item.Price</span></p>
+                            <div class="bottom">
+                                <p class="date">
+                                    <img src="~/assets/icon/calendar.png" alt="" /> @item.TourDate
+                                </p>
+                                <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id" class="more-detailed">daha ətrafli</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+            @*<div class="more-cards"><button id="load-more-az">Daha çox</button></div>*@
+        </div>
+    </section>
+    <!-- Azerbaijan tours end -->
+</main>
+<!-- Main end -->

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+@model Category
+<div class="container">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Yeni Kateqoriya</h2>
+                    <form method="post" enctype="multipart/form-data" class="forms-sample">
+                        <div class="form-group">
+                            <label asp-for="Name">Başlıq</label>
+                            <input asp-for="Name" class="form-control" placeholder="Başlıq">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Yeni Kateqoriya</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

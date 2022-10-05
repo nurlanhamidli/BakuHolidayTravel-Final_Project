@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+@model AdminLoginViewModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewData["Title"]</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/admin/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/admin/vendors/base/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/admin/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="~/admin/images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="content-wrapper d-flex align-items-center auth px-0">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                            <div class="brand-logo">
+                                <img src="~/assets/images/logo.svg" style="background-color: red; padding: 0.4rem .8rem;" alt="logo">
+                            </div>
+                            <h4 class="font-weight-light">Xoş Gəlmisiniz!</h4>
+                            <form class="pt-3" method="post">
+                                <div class="form-group">
+                                    <input asp-for="Username" class="form-control form-control-user"
+                                           placeholder="Email Daxil Edin">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control form-control-user"
+                                           asp-for="Password" placeholder="Şifrə">
+                                </div>
+                                <div class="text-danger" style="text-align:center;list-style:none" asp-validation-summary="ModelOnly"></div>
+                                 @*<a asp-action="forgot" class="text-danger mb-2 d-block" asp-controller="account">Şifrəmi unutdum</a>*@
+                                <button type="submit" class="btn btn-danger btn-user btn-block">
+                                    Daxil ol
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/admin/vendors/base/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="~/admin/js/off-canvas.js"></script>
+    <script src="~/admin/js/hoverable-collapse.js"></script>
+    <script src="~/admin/js/template.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Tours>
+
+@foreach (var item in Model)
+{
+    <div class="col">
+        <div class="card h-100" data-id="@item.Category.Id">
+            <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id">
+                <img src="~/uploads/tour/@item.ImgUrl"
+                 class="card-img-top"
+                 alt="..." />
+            </a>
+            <span class="price">$ @item.Price</span>
+            <div class="card-body">
+                <h5 class="card-title">
+                    @item.Title
+                </h5>
+                <div class="date">
+                    <img src="~/assets/icon/date-orange.png" alt="" />
+                    @item.TourDate
+                </div>
+                <div class="card-bottom">
+                    <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id" class="more-detailed">ətraflı məlumat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}

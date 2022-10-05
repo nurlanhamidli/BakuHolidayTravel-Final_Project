@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Bootstrap's CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Link Owl Carousel's CSS -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/owl.theme.default.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Css here -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/root.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+    <link rel="icon" type="image" href="./assets/web-icon.png" />
+    <title>Turizm aləmində yeniliklər</title>
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+      <div class="container">
+        <nav class="row">
+          <div class="logo-img col-1">
+            <a href="./index.html"
+              ><img src="./assets/images/logo.png" alt="bht"
+            /></a>
+          </div>
+          <div class="menu col-lg-7">
+            <ul>
+              <li><a href="./tours.html">turlar</a></li>
+              <li><a href="./azerbaijan.html">azərbaycan</a></li>
+              <li><a href="./services.html">xidmətlər</a></li>
+              <li><a href="./about.html">haqqımızda</a></li>
+              <li><a href="./import-info.html">önəmli info</a></li>
+              <li><a href="./blog.html">bloq</a></li>
+              <li><a href="./contact.html">əlaqə</a></li>
+            </ul>
+            <div class="search-box">
+              <input type="text" placeholder="Axtarış sözü daxil edin" />
+            </div>
+          </div>
+          <div class="menu-icon col-1">
+            <img src="./assets/icon/Hamburger_icon_white.png" alt="" />
+          </div>
+          <div class="dropdown-menu">
+            <div class="container">
+              <div class="row">
+                <div class="m-search-box col-12">
+                  <a class="menu-search-button" href="javascript:">
+                    <img src="./assets/icon/search_white.png" alt="Search" />
+                  </a>
+                  <input
+                    type="text"
+                    name="mobile-search"
+                    placeholder="Axtarış sözü daxil edin"
+                  />
+                </div>
+                <div class="close-menu-icon">
+                  <img src="./assets/icon/menu-x-icon.png" alt="" />
+                </div>
+                <div class="mobile-menu row row-cols-2">
+                  <ul class="menu-list">
+                    <li>
+                      <a href="./tours.html">TURLAR</a>
+                    </li>
+                    <li>
+                      <a href="./azerbaijan.html">AZƏRBAYCAN</a>
+                    </li>
+                    <li>
+                      <a href="./services.html">XİDMƏTLƏR</a>
+                    </li>
+                    <li>
+                      <a href="./about.html">HAQQIMIZDA</a>
+                    </li>
+                    <li>
+                      <a href="./import-info.html">ÖNƏMLİ İNFO</a>
+                    </li>
+                    <li>
+                      <a href="./blog.html">BLOQ</a>
+                    </li>
+                    <li>
+                      <a href="./contact.html">ƏLAQƏ</a>
+                    </li>
+                  </ul>
+                  <ul class="menu-list-second">
+                    <li>
+                      <img src="./assets/icon/phone-call.png" />
+                      <a href="tel:994125998899" target="_blank"
+                        >+99412 599 88 99</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/phone.png" />
+                      <a href="tel:994774977776" target="_blank"
+                        >+99477 497 77 76</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/whatsapp.png" />
+                      <a
+                        href="https://api.whatsapp.com/send?phone=994774755555"
+                        target="_blank"
+                        >+994774755555</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/skype.png" />
+                      <a href="skype:baku.holiday.travel?chat" target="_blank"
+                        >baku.holiday.travel</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/messenger.png" />
+                      <a href="https://m.me/baku.holiday.travel" target="_blank"
+                        >baku.holiday.travel</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lang col-lg-1">
+            <div class="lang-select">AZ</div>
+            <img src="./assets/icon/arrow-down.png" alt="" />
+          </div>
+          <div class="additional col-lg-3">
+            <ul>
+              <li class="search">
+                <a href="#"
+                  ><img src="./assets/icon/search_white.png" alt="..."
+                /></a>
+              </li>
+              <li class="phone">
+                <a class="phone-hvr" disabled
+                  ><img src="./assets/icon/phone_white.png" alt="..."
+                /></a>
+                <ul class="phone-dropdown">
+                  <li>
+                    <a href="tel:077-767-22-77"
+                      ><img
+                        src="./assets/icon/phone-call.png"
+                        class="phone-call-icon"
+                        alt=""
+                      />+99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:077-767-22-77"
+                      ><img
+                        src="./assets/icon/phone.png"
+                        alt=""
+                        class="phone-icon"
+                      />+99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=0777672277"
+                      target="_blank"
+                      ><img
+                        src="./assets/icon/whatsapp.png"
+                        alt=""
+                        class="wapp-icon"
+                      />
+                      +99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a href="skype:YourSkypeName?call"
+                      ><img
+                        src="./assets/icon/skype.png"
+                        alt=""
+                        class="skype-icon"
+                      />baku.holiday.travel</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://m.me/USERNAME" target="_blank">
+                      <img
+                        src="./assets/icon/messenger.png"
+                        alt=""
+                        class="messenger-icon"
+                      />
+                      baku.holiday.travel
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fb-link">
+                <a href="https://www.facebook.com/"
+                  ><img src="./assets/icon/facebook.png" alt="..."
+                /></a>
+              </li>
+              <li class="instagram-link">
+                <a href="https://www.instagram.com/"
+                  ><img src="./assets/icon/instagram.png" alt="..."
+                /></a>
+              </li>
+              <li class="linkedin-link">
+                <a href="https://www.linkedin.com/"
+                  ><img src="./assets/icon/linkedin.png" alt="..."
+                /></a>
+              </li>
+              <li class="twitter-link">
+                <a href="https://twitter.com/"
+                  ><img src="./assets/icon/soc_tw.png" alt="..."
+                /></a>
+              </li>
+              <li class="youtube-link">
+                <a href="https://www.youtube.com/"
+                  ><img src="./assets/icon/soc_yt.png" alt="..."
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="image">
+          <img src="./assets/images/import-info-img.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+          <h1 class="page-title">Önəmli İnfo</h1>
+        </div>
+      </section>
+      <!-- Hero end -->
+
+      <!-- Static Text start -->
+      <section class="static-text">
+        <div class="container">
+          <div class="title"><h1>TURİZM ALƏMİNDƏ YENİLİKLƏR</h1></div>
+          <div class="subtitle">
+            <p></p>
+          </div>
+          <div class="row row-cols-md-1">
+            <div class="col">
+              <div class="text">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Static Text end -->
+
+      <!-- Services start -->
+      <section class="pages">
+        <div class="container">
+          <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2">
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="page h-75">
+                <a href="#">
+                  <div class="img">
+                    <img src="./assets/icon/news-icon.png" alt="" />
+                  </div>
+                  <div class="title">Turizm XƏBƏRLƏRİ</div>
+                  <div class="desc">
+                    Azərbaycan və dünyadan ən son turizm xəbərləri
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tours end -->
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col">
+                <div class="contacts">
+                  <div class="logo">
+                    <img
+                      src="./assets/images/logo.svg"
+                      alt="baku holiday travel"
+                    />
+                  </div>
+                  <div class="address">
+                    <div class="icon">
+                      <img src="./assets/icon/location.png" alt="" />
+                    </div>
+                    <div class="text">
+                      AZ1126 Bakı ş., Mirzə Ağa Əliyev küçəsi 210, (Winter Park
+                      Plaza, 1-ci mərtəbə)
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <div class="icon">
+                      <img src="./assets/icon/phone_orange.png" alt="" />
+                    </div>
+                    <div class="text">
+                      <a href="tel:077-767-22-77">+994 77 767 22 77</a>
+                    </div>
+                  </div>
+                  <div class="email">
+                    <div class="icon">
+                      <img src="./assets/icon/mail.png" alt="" />
+                    </div>
+                    <div class="text">
+                      <a href="mailto:info@bht.az">info@bht.az</a>
+                    </div>
+                  </div>
+                  <div class="social">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/facebook.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/instagram.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/linkedin.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/soc_tw.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/soc_yt.png" alt=""
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="pages">
+                  <h2>Haqqimizda</h2>
+                  <ul>
+                    <li><a href="#">ŞİRKƏT HAQQINDA</a></li>
+                    <li><a href="#">KOMANDAMIZ</a></li>
+                    <li><a href="#">VİP XİDMƏTLƏRİ</a></li>
+                    <li><a href="#">NİYƏ BİZ?</a></li>
+                    <li><a href="#">NAİLİYYƏTLƏRİMİZ</a></li>
+                    <li><a href="#">QALEREYA</a></li>
+                    <li><a href="#">VAKANSİYALAR</a></li>
+                    <li><a href="#">ŞİKAYƏT VƏ TƏKLİF</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 d-flex flex-column">
+            <div class="subscribe">
+              <div class="heading">YENİLİKLƏRİMİZƏ ABUNƏ OL</div>
+              <div class="text">
+                Email daxil edin, ən yeni və sərfəli turlar haqda məlumat alın
+              </div>
+              <div class="form">
+                <form name="subscribe" method="post" target="_blank">
+                  <label for="mail" class="icon"
+                    ><img src="./assets/icon/mail_white.png" alt=""
+                  /></label>
+                  <input
+                    id="mail"
+                    class="email"
+                    type="email"
+                    placeholder="Email address"
+                  />
+                  <button class="button" name="subscribe" type="submit">
+                    Abunə
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="news">
+                  <div class="heading">TURİZM XƏBƏRLƏRİ</div>
+                  <div class="news-cards">
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-1.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-2.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-3.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="blog">
+                  <div class="heading">NAİLİYYƏTLƏRİMİZ</div>
+                  <div class="blog-cards">
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-1.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              DAHA BIR XARICI ƏMƏKDAŞLIQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-2.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BAKU HOLIDAY TRAVEL-DƏN YENI ÜZVLÜK.
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-3.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              RAMIL RZAYEV AZƏRBAYCANIN UĞURLU IŞ ADAMI
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="payment-copyright">
+              <div class="payment">
+                <div class="mastercard">
+                  <img src="./assets/icon/mastercard.png" alt="" />
+                </div>
+                <div class="visa">
+                  <img src="./assets/icon/visa.png" alt="" />
+                </div>
+              </div>
+              <div class="copyright">
+                &copy;2022 Bütün hüquqlar qorunur. Baku Holiday Travel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Axios Js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link jQuery's JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link Owl Carousel's JS -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owlCaousel.js"></script>
+    <!-- Link Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- JavaScript here -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

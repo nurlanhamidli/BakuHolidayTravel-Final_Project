@@ -1,0 +1,154 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>bht_demo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\AdminPanel\wwwroot\**" />
+    <Content Remove="Areas\AdminPanel\wwwroot\**" />
+    <EmbeddedResource Remove="Areas\AdminPanel\wwwroot\**" />
+    <None Remove="Areas\AdminPanel\wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220816205951_ModifiedTable.cs" />
+    <Compile Remove="Migrations\20220816205951_ModifiedTable.Designer.cs" />
+    <Compile Remove="Migrations\20220820085513_AddedAppUserTable.cs" />
+    <Compile Remove="Migrations\20220820085513_AddedAppUserTable.Designer.cs" />
+    <Compile Remove="Migrations\20220820091523_[Required].cs" />
+    <Compile Remove="Migrations\20220820091523_[Required].Designer.cs" />
+    <Compile Remove="Migrations\20220822090903_AddedBlogTable.cs" />
+    <Compile Remove="Migrations\20220822090903_AddedBlogTable.Designer.cs" />
+    <Compile Remove="Migrations\20220822092001_BlogTableAdd.cs" />
+    <Compile Remove="Migrations\20220822092001_BlogTableAdd.Designer.cs" />
+    <Compile Remove="Migrations\20220822092117_BlogsTable.cs" />
+    <Compile Remove="Migrations\20220822092117_BlogsTable.Designer.cs" />
+    <Compile Remove="Migrations\20220822104149_ChangeALL.cs" />
+    <Compile Remove="Migrations\20220822104149_ChangeALL.Designer.cs" />
+    <Compile Remove="Migrations\20220822104849_BlogsTable.cs" />
+    <Compile Remove="Migrations\20220822104849_BlogsTable.Designer.cs" />
+    <Compile Remove="Migrations\20220822143709_changeBlogsTable.cs" />
+    <Compile Remove="Migrations\20220822143709_changeBlogsTable.Designer.cs" />
+    <Compile Remove="Migrations\20220822150203_AddedBlogsColumn.cs" />
+    <Compile Remove="Migrations\20220822150203_AddedBlogsColumn.Designer.cs" />
+    <Compile Remove="Migrations\20220823082308_AddRelationBlogCategory.cs" />
+    <Compile Remove="Migrations\20220823082308_AddRelationBlogCategory.Designer.cs" />
+    <Compile Remove="Migrations\20220823082628_AddRelationBlogCategoryModified.cs" />
+    <Compile Remove="Migrations\20220823082628_AddRelationBlogCategoryModified.Designer.cs" />
+    <Compile Remove="Migrations\20220823082855_AddRelationBlogCategory.cs" />
+    <Compile Remove="Migrations\20220823082855_AddRelationBlogCategory.Designer.cs" />
+    <Compile Remove="Migrations\20220823083212_AddRelationBlogCategory.cs" />
+    <Compile Remove="Migrations\20220823083212_AddRelationBlogCategory.Designer.cs" />
+    <Compile Remove="Migrations\20220825132525_AddTourCategoryTable.cs" />
+    <Compile Remove="Migrations\20220825132525_AddTourCategoryTable.Designer.cs" />
+    <Compile Remove="Migrations\20220827124209_AddVacanciesTable.cs" />
+    <Compile Remove="Migrations\20220827124209_AddVacanciesTable.Designer.cs" />
+    <Compile Remove="Migrations\20220827132958_ChangeVacancyDateType.cs" />
+    <Compile Remove="Migrations\20220827132958_ChangeVacancyDateType.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.28" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="MimeKit" Version="3.4.0" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\blog\" />
+    <Folder Include="wwwroot\uploads\gallery\" />
+    <Folder Include="wwwroot\uploads\page\" />
+    <Folder Include="wwwroot\uploads\tour\" />
+    <Folder Include="wwwroot\uploads\slider\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\ckeditor5-build-classic\ckeditor.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\ckeditor.js.map" />
+    <None Include="wwwroot\ckeditor5-build-classic\LICENSE.md" />
+    <None Include="wwwroot\ckeditor5-build-classic\README.md" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\github.svg" />
+    <None Include="wwwroot\ckeditor5-build-classic\sample\img\logo.svg" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\af.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ar.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ast.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\az.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bg.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\bs.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ca.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\cs.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\da.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\de-ch.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\de.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\el.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\en-au.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\en-gb.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\eo.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\es.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\et.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\eu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fa.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\fr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\gl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\gu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\he.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\hu.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\id.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\it.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ja.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\jv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\km.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\kn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ko.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ku.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\lt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\lv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ms.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\nb.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ne.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\nl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\no.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\oc.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pt-br.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\pt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ro.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ru.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\si.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sl.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sq.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sr-latn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\sv.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\th.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tr.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\tt.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ug.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\uk.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\ur.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\uz.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\vi.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\zh-cn.js" />
+    <None Include="wwwroot\ckeditor5-build-classic\translations\zh.js" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+@model List<Category>
+<div class="container">
+    <h1>Kateqoriyalar</h1>
+    <a asp-action="create" class="btn btn-warning">Yeni Kateqoriya</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Count</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.Name</td>
+                    <td><a asp-controller="Category" asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Redaktə et</a> </td>
+                    @if (item.IsDeleted == false)
+                    {
+                        <td><a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="category" class="btn btn-danger delete-btn">Deaktiv et</a></td>
+                    }
+                    @if (item.IsDeleted == true)
+                    {
+                        <td><a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="category" class="btn btn-primary delete-btn">Aktiv</a></td>
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+

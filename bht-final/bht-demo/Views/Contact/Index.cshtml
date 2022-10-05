@@ -1,0 +1,231 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ContactUs
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/contact-img.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">əlaqə</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Map start -->
+    <section id="map">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="infos">
+                        <div class="titles row">
+                            <div class="title col-5">Winter Park Plaza</div>
+                            <div class="title-tab col-7"></div>
+                        </div>
+                        <a href="tel:077-000-00-00">
+                            <div class="icon">
+                                <img src="~/assets/icon/contacts_phone.png" alt="" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Zəng üçün</div>
+                                <div class="info">+994 77 000 00 00</div>
+                            </div>
+                            <div class="more-detailed h-100">zəng etmək</div>
+                        </a>
+                        <a href="tel:077-111-11-11">
+                            <div class="icon">
+                                <img src="~/assets/icon/contacts_mobile.png" alt="" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Zəng üçün</div>
+                                <div class="info">+994 77 000 00 00</div>
+                            </div>
+                            <div class="more-detailed h-100">zəng etmək</div>
+                        </a>
+                        <a href="mailto: abc@example.com">
+                            <div class="icon">
+                                <img src="~/assets/icon/contacts_mail.png" alt="" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Email ünvan</div>
+                                <div class="info">abc@example.com</div>
+                            </div>
+                        </a>
+                        <a disabled>
+                            <div class="icon">
+                                <img src="~/assets/icon/contacts_location.png" alt="" />
+                            </div>
+                            <div class="content">
+                                <div class="text">Ünvanımız</div>
+                                <div class="info">
+                                    AZ1126 BAKI Ş., MİRZƏ AĞA ƏLİYEV KÜÇƏSİ 210, (WİNTER PARK
+                                    PLAZA, 1-Cİ MƏRTƏBƏ)
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="bht-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.488635842946!2d49.835549314491!3d40.37586166604958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d9bf29fc75f%3A0x3328d941152ec571!2sBaku%20Holiday%20Travel!5e0!3m2!1str!2s!4v1659251627064!5m2!1str!2s"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map end -->
+    <!-- Contact us start -->
+    <section id="contact-us">
+        <div class="container">
+            <div class="row row-cols-1">
+                <div class="heading">
+                    <div class="title"><h1>BİZİMLƏ əlaqə</h1></div>
+                    <img src="~/assets/images/conatct-us-img.jpg"
+                         class="w-100"
+                         alt="" />
+                </div>
+                <!-- content -->
+                <div class="content">
+                    <span>
+                        <strong>
+                            Arzularınızdakı səyahətiniz və uğurlu biznes səfərləriniz
+                            üçün Turizmin bütün sahələri üzrə peşəkar komandamızla sizin
+                            xidmətinizdəyik.
+                        </strong>
+                    </span>
+                    <span>------------</span>
+                    <span>Əlaqə nömrələri</span>
+                    <span>Ofis:</span>
+                    <span>+99412 000 00 00</span>
+                    <span>Aviabiletlər:</span>
+                    <span>
+                        +99412 000 00 00 (Whatsapp ilə əlaqə üçün
+                        <a href="tel:012-000-00-00">klik edin</a> )
+                    </span>
+                    <span>Xarici turlar:</span>
+                    <span>
+                        +99412 000 00 00 (Whatsapp ilə əlaqə üçün
+                        <a href="tel:012-000-00-00">klik edin</a> )
+                    </span>
+                    <span>
+                        +99412 000 00 00 (Whatsapp ilə əlaqə üçün
+                        <a href="tel:012-000-00-00">klik edin</a> )
+                    </span>
+                    <span>
+                        +99412 000 00 00 (Whatsapp ilə əlaqə üçün
+                        <a href="tel:012-000-00-00">klik edin</a> )
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact us end -->
+    <!-- Pages start -->
+    <section class="pages">
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2">
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="aze" asp-action="index">
+                            <div class="img">
+                                <img src="~/assets/icon/az-map-blue.png" alt="" />
+                            </div>
+                            <div class="title">Azərbaycan turları</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="service" asp-action="detail" asp-route-id="6">
+                            <div class="img">
+                                <img src="~/assets/icon/korporativ-elaqe-blue.png" alt="" />
+                            </div>
+                            <div class="title">Korporativ əlaqələr</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="service" asp-action="detail" asp-route-id="3">
+                            <div class="img">
+                                <img src="~/assets/icon/vip-blue.png" alt="" />
+                            </div>
+                            <div class="title">VİP müştərİlər</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a href="./azerbaijan.html">
+                            <div class="img">
+                                <img src="~/assets/icon/subagent-blue.png" alt="" />
+                            </div>
+                            <div class="title">Subagent</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pages end -->
+    <!-- Contact start -->
+    <section class="contact">
+        <div class="container">
+            <div class="row row-cols-1">
+                <h3 class="title">BİZƏ YAZIN</h3>
+            </div>
+            <div class="contacts">
+                <form method="post" enctype="multipart/form-data" name="sendmessage">
+                    <div class="row row-cols-md-3">
+                        <div class="col">
+                            <label asp-for="Name">Adı</label>
+                            <input asp-for="Name"
+                                   placeholder="Adınızı daxil edin" />
+                        </div>
+                        <div class="col">
+                            <label asp-for="Surname">Soyadı</label>
+                            <input asp-for="Surname"
+                                   placeholder="Soyadınızı daxil edin" />
+                        </div>
+                        <div class="col">
+                            <label asp-for="Email">Email</label>
+                            <input placeholder="Email ünvanınızı daxil edin"
+                                   asp-for="Email" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label asp-for="PhoneNumber">Mobil nömrəniz</label>
+                            <input asp-for="PhoneNumber"
+                                   placeholder="Mobil nömrənizi daxil edin" />
+                        </div>
+                        <div class="col-md-8">
+                            <label asp-for="Message">Mesajınız</label>
+                            <textarea asp-for="Message"
+                                      placeholder="Mesajınızı daxil edin"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="actions">
+                                <button class="form-submit" type="submit">
+                                    məktubu göndər
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact end -->
+</main>
+<!-- Main end -->
+

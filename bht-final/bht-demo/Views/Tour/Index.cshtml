@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TourVM
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero position-relative">
+        <div class="image">
+            <img src="~/assets/images/turlar-img.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title"></h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Categories -->
+    <div class="category-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <label for="type">Turun növü</label>
+                    <ul class="tour-menu-list">
+                        <li class="tour-menu-item">
+                            <span class="cate-title"><img src="~/assets/icon/menu.png" class="c-icon" alt="" />Bütün növlər</span>
+                            <ul class="tour-inner-list">
+                                <li class="tour-inner-item">
+                                    <a asp-controller="tour" asp-action="index" asp-route-id="" >Bütün növlər</a>
+                                </li>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <li class="tour-inner-item">
+                                        <a asp-controller="tour" asp-action="index" asp-route-id="@item.Id" data-id="@item.Id">@item.Name</a>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // -->
+    <!-- Tours start -->
+    <section id="tours">
+        <div class="container">
+            <div class="title"><h1>ən son turlar</h1></div>
+            <div class="subtitle">
+                <p>
+                    Buradan siz dünyanın istənilən yerə tur ala bilərsiz. Qitəyə,
+                    Növünə və ya Şəhər görə Axtarış edin.
+                </p>
+            </div>
+            <!-- sort it out -->
+            <div class="sort">
+                <span>Sırala: </span>
+                <a href="#" class="active">yeni</a>
+                <div class="divider"></div>
+                <a href="#">ucuzdan - bahaya</a>
+                <div class="divider"></div>
+                <a href="#">bahadan - ucuza</a>
+                <div class="divider"></div>
+                <a href="#">ən popular</a>
+            </div>
+            <!-- cards -->
+            <div class="tour-cards">
+                <div id="tour-list" class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 g-4">
+                    @foreach (var item in Model.Tours)
+                    {
+                        <div class="col">
+                            <div class="card h-100" data-id="@item.Category.Id">
+                                <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id">
+                                    <img src="~/uploads/tour/@item.ImgUrl"
+                                     class="card-img-top"
+                                     alt="..." />
+                                </a>
+                                <span class="price">$ @item.Price</span>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        @item.Title
+                                    </h5>
+                                    <div class="date">
+                                        <img src="~/assets/icon/date-orange.png" alt="" />
+                                        @item.TourDate
+                                    </div>
+                                    <div class="card-bottom">
+                                        <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id" class="more-detailed">ətraflı məlumat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                @*<div class="more-cards"><button id="load-more" href="#">Daha çox</button></div>*@
+            </div>
+        </div>
+    </section>
+    <!-- Tours end -->
+</main>
+<!-- Main end -->

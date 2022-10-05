@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Gallery>
+
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="./assets/images/gallery-hero-img.png" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">QALEREYA</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- gallery list -->
+    <div class="gallery-lists">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="gallery-list">
+                        <li>
+                            <a href="#" class="active">Yeni WinterPark ofisin açılışı</a>
+                        </li>
+                        <li>
+                            <a href="#" class="">Baku Holiday Travel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery start -->
+    <section class="gallery-page">
+        <div class="container">
+            <div class="row flex-wrap">
+                <div class="col-sm-3 col-6 column">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Column == 1)
+                        {
+                            <img src="./uploads/gallery/@item.ImgUrl" alt="" />
+                        }
+                    }
+                </div>
+                <div class="col-sm-3 col-6 column">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Column == 2)
+                        {
+                            <img src="./uploads/gallery/@item.ImgUrl" alt="" />
+                        }
+                    }
+                </div>
+                <div class="col-sm-3 col-6 column">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Column == 3)
+                        {
+                            <img src="./uploads/gallery/@item.ImgUrl" alt="" />
+                        }
+                    }
+                </div>
+                <div class="col-sm-3 col-6 column">
+                    @foreach (var item in Model)
+                    {
+                        if (item.Column == 4)
+                        {
+                            <img src="./uploads/gallery/@item.ImgUrl" alt="" />
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery end -->
+</main>
+<!-- Main end -->

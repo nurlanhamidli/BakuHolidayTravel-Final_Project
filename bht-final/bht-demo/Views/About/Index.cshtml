@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Bizim Haqqımızda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model AboutVM
+
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/about-img.gif" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">Haqqımızda</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title"><h1>SİZİN SƏYAHƏTİNİZ BİZİM İŞİMİZDİR</h1></div>
+            <div class="subtitle">
+                <p>BAKU HOLIDAY TRAVEL</p>
+            </div>
+            <div class="row row-cols-md-1">
+                <div class="col">
+                    <div class="text">
+                        <p>
+                            Azərbaycanın ən qabaqcıl turizm şirkətlərindən olan Baku
+                            Holiday Travel 2013-cü ildə Turizm və Mədəniyyət Nazirliyinin
+                            lisenziyası ilə fəaliyyətə başlamışdır. Aviabiletlər, Biznes
+                            səfərləri, Bal Ayları, Müalicə paketləri və turizmin digər
+                            sahələri üzrə peşəkar xidməti ilə müştərilərin bəyəndikləri və
+                            seçdikləri Turizm şirkətidir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Services start -->
+    <section class="pages">
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2">
+                @foreach (var item in Model.ServiceAndAbouts)
+                {
+                    <div class="col">
+                        <div class="page h-75">
+                            <a asp-controller="Service" asp-action="detail" asp-route-id="@item.Id">
+                                <div class="img">
+                                    <img src="~/uploads/page/@item.Icon" alt="" />
+                                </div>
+                                <div class="title">@item.Name</div>
+                                <div class="desc">
+                                    @item.Title
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="about" asp-action="Team">
+                            <div class="img">
+                                <img src="~/assets/icon/p1cco3rrhh3sa10t71f2t1fah2ad9.png" alt="" />
+                            </div>
+                            <div class="title">komandamız</div>
+                            <div class="desc">
+                                Baku Holiday Travel Komandası
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="blog" asp-action="index" asp-route-id="@Model.BlogCategory.Id">
+                            <div class="img">
+                                <img src="~/assets/icon/p1cco3nh91dqg1pfdrjn1ccm11q57.png" alt="" />
+                            </div>
+                            <div class="title">@Model.BlogCategory.Name</div>
+                            <div class="desc">
+                                @Model.BlogCategory.Desc
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="gallery" asp-action="index">
+                            <div class="img">
+                                <img src="~/assets/icon/p1cue2clf61k1epol1789ab91quf9.png" alt="" />
+                            </div>
+                            <div class="title">QALEREYA</div>
+                            <div class="desc">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="vacancy" asp-action="index">
+                            <div class="img">
+                                <img src="~/assets/icon/p1cco3bbjtcri1mm11bejvmgdgm7.png" alt="" />
+                            </div>
+                            <div class="title">Vakansiyalar</div>
+                            <div class="desc">
+                                Şirkətimizdə mövcud olan iş elanları
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tours end -->
+</main>
+<!-- Main end -->

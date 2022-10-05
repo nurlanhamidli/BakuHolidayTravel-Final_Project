@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model ContactUs
+
+
+
+<div class="containers p-5">
+    <div class="row flex-wrap">
+        <div class="col-6 mb-3">Ad:<br /> @Model.Name</div>
+        <div class="col-6 mb-3">Soyad:<br /> @Model.Surname</div>
+        <div class="col-6 mb-3">Email:<br /> @Model.Email</div>
+        <div class="col-6 mb-3">Telefon:<br /> @Model.PhoneNumber</div>
+        <div class="col-12 mb-3">Mesaj: <br /> @Model.Message</div>
+    </div>
+</div>

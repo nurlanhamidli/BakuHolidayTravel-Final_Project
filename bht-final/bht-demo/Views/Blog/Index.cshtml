@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Turizm haqqında bloq - səyahəti sevənlər üçün";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model BlogVM
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/blog-img-hero.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">@Model.BlogCategory.Name</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title"><h1>@Model.BlogCategory.Desc</h1></div>
+            <div class="subtitle">
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Services start -->
+    <section id="blog" class="blog-news">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
+                @foreach (var item in Model.Blogs)
+                {
+                <div class="col" data-id="@Model.BlogCategory.Id">
+                    <div class="card h-100">
+                        <img src="~/uploads/blog/@item.ImgUrl"
+                             class="card-img-top"
+                             alt="..." />
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Title</h5>
+                            <p class="card-text">
+                                @item.ShortText
+                            </p>
+                            <div class="card-footer">
+                                <a asp-controller="blog" asp-action="Detail" asp-route-id="@item.Id">Daha ətraflı</a>
+                                <div class="date">
+                                    <img src="~/assets/icon/date-orange.png"
+                                         class="icon"
+                                         alt="" />
+                                    <span>@item.Date</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- Tours end -->
+</main>
+<!-- Main end -->
+

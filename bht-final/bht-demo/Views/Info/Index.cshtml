@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<BlogCategory>
+
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/import-info-img.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">Önəmli İnfo</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title"><h1>TURİZM ALƏMİNDƏ YENİLİKLƏR</h1></div>
+            <div class="subtitle">
+                <p></p>
+            </div>
+            <div class="row row-cols-md-1">
+                <div class="col">
+                    <div class="text">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Services start -->
+    <section class="pages">
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 row-cols-2">
+                @foreach (var item in Model)
+                {
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="blog" asp-action="index" asp-route-id="@item.Id">
+                            <div class="img">
+                                <img src="~/assets/icon/@item.ImgUrl" alt="" />
+                            </div>
+                            <div class="title">@item.Name</div>
+                            <div class="desc">
+                                @item.Desc
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                }
+                <div class="col">
+                    <div class="page h-75">
+                        <a asp-controller="gallery" asp-action="index">
+                            <div class="img">
+                                <img src="~/assets/icon/GalereyaImg.png" alt="" />
+                            </div>
+                            <div class="title">QALEREYA</div>
+                            <div class="desc">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tours end -->
+</main>
+<!-- Main end -->
+

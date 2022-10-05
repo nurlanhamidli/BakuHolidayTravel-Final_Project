@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model Gallery
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Yeni Şəkil</h2>
+                    <form method="post" enctype="multipart/form-data" class="forms-sample">
+                        <div class="form-group row">
+                            <label asp-for="Column" class="col-sm-2 col-form-label">Sütun</label>
+                            <div class="col-sm-2">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" asp-for="Column" id="membershipRadios1" value="1" checked>
+                                        1 ci sütun
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" asp-for="Column" id="membershipRadios2" value="2">
+                                        2 ci sütun
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" asp-for="Column" id="membershipRadios3" value="3">
+                                        3 ci sütun
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" asp-for="Column" id="membershipRadios4" value="4">
+                                        4 ci sütun
+                                    </label>
+                                </div>
+                            </div>
+                            <span asp-validation-for="Column" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="mb-3">
+                                <label asp-for="ImageFile" class="form-label">Şəkil yüklə</label>
+                                <input asp-for="ImageFile" class="form-control file-upload-info btn-primary" accept="image/*">
+                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary me-2">Yeni Şəkil</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

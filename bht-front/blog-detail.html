@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Bootstrap's CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- Link Owl Carousel's CSS -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/owl.theme.default.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- Css here -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/root.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+    <link rel="icon" type="image" href="./assets/web-icon.png" />
+    <title>Turizm haqqında bloq - səyahəti sevənlər üçün</title>
+  </head>
+  <body>
+    <!-- Header start -->
+    <header>
+      <div class="container">
+        <nav class="row">
+          <div class="logo-img col-1">
+            <a href="./index.html"
+              ><img src="./assets/images/logo.png" alt="bht"
+            /></a>
+          </div>
+          <div class="menu col-lg-7">
+            <ul>
+              <li><a href="./tours.html">turlar</a></li>
+              <li><a href="./azerbaijan.html">azərbaycan</a></li>
+              <li><a href="./services.html">xidmətlər</a></li>
+              <li><a href="./about.html">haqqımızda</a></li>
+              <li><a href="./import-info.html">önəmli info</a></li>
+              <li><a href="./blog.html">bloq</a></li>
+              <li><a href="./contact.html">əlaqə</a></li>
+            </ul>
+            <div class="search-box">
+              <input type="text" placeholder="Axtarış sözü daxil edin" />
+            </div>
+          </div>
+          <div class="menu-icon col-1">
+            <img src="./assets/icon/Hamburger_icon_white.png" alt="" />
+          </div>
+          <div class="dropdown-menu">
+            <div class="container">
+              <div class="row">
+                <div class="m-search-box col-12">
+                  <a class="menu-search-button" href="javascript:">
+                    <img src="./assets/icon/search_white.png" alt="Search" />
+                  </a>
+                  <input
+                    type="text"
+                    name="mobile-search"
+                    placeholder="Axtarış sözü daxil edin"
+                  />
+                </div>
+                <div class="close-menu-icon">
+                  <img src="./assets/icon/menu-x-icon.png" alt="" />
+                </div>
+                <div class="mobile-menu row row-cols-2">
+                  <ul class="menu-list">
+                    <li>
+                      <a href="./tours.html">TURLAR</a>
+                    </li>
+                    <li>
+                      <a href="./azerbaijan.html">AZƏRBAYCAN</a>
+                    </li>
+                    <li>
+                      <a href="./services.html">XİDMƏTLƏR</a>
+                    </li>
+                    <li>
+                      <a href="./about.html">HAQQIMIZDA</a>
+                    </li>
+                    <li>
+                      <a href="./import-info.html">ÖNƏMLİ İNFO</a>
+                    </li>
+                    <li>
+                      <a href="./blog.html">BLOQ</a>
+                    </li>
+                    <li>
+                      <a href="./contact.html">ƏLAQƏ</a>
+                    </li>
+                  </ul>
+                  <ul class="menu-list-second">
+                    <li>
+                      <img src="./assets/icon/phone-call.png" />
+                      <a href="tel:994125998899" target="_blank"
+                        >+99412 599 88 99</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/phone.png" />
+                      <a href="tel:994774977776" target="_blank"
+                        >+99477 497 77 76</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/whatsapp.png" />
+                      <a
+                        href="https://api.whatsapp.com/send?phone=994774755555"
+                        target="_blank"
+                        >+994774755555</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/skype.png" />
+                      <a href="skype:baku.holiday.travel?chat" target="_blank"
+                        >baku.holiday.travel</a
+                      >
+                    </li>
+                    <li>
+                      <img src="./assets/icon/messenger.png" />
+                      <a href="https://m.me/baku.holiday.travel" target="_blank"
+                        >baku.holiday.travel</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lang col-lg-1">
+            <div class="lang-select">AZ</div>
+            <img src="./assets/icon/arrow-down.png" alt="" />
+          </div>
+          <div class="additional col-lg-3">
+            <ul>
+              <li class="search">
+                <a href="#"
+                  ><img src="./assets/icon/search_white.png" alt="..."
+                /></a>
+              </li>
+              <li class="phone">
+                <a class="phone-hvr" disabled
+                  ><img src="./assets/icon/phone_white.png" alt="..."
+                /></a>
+                <ul class="phone-dropdown">
+                  <li>
+                    <a href="tel:077-767-22-77"
+                      ><img
+                        src="./assets/icon/phone-call.png"
+                        class="phone-call-icon"
+                        alt=""
+                      />+99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:077-767-22-77"
+                      ><img
+                        src="./assets/icon/phone.png"
+                        alt=""
+                        class="phone-icon"
+                      />+99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://api.whatsapp.com/send?phone=0777672277"
+                      target="_blank"
+                      ><img
+                        src="./assets/icon/whatsapp.png"
+                        alt=""
+                        class="wapp-icon"
+                      />
+                      +99477 767 22 77</a
+                    >
+                  </li>
+                  <li>
+                    <a href="skype:YourSkypeName?call"
+                      ><img
+                        src="./assets/icon/skype.png"
+                        alt=""
+                        class="skype-icon"
+                      />baku.holiday.travel</a
+                    >
+                  </li>
+                  <li>
+                    <a href="http://m.me/USERNAME" target="_blank">
+                      <img
+                        src="./assets/icon/messenger.png"
+                        alt=""
+                        class="messenger-icon"
+                      />
+                      baku.holiday.travel
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="fb-link">
+                <a href="https://www.facebook.com/"
+                  ><img src="./assets/icon/facebook.png" alt="..."
+                /></a>
+              </li>
+              <li class="instagram-link">
+                <a href="https://www.instagram.com/"
+                  ><img src="./assets/icon/instagram.png" alt="..."
+                /></a>
+              </li>
+              <li class="linkedin-link">
+                <a href="https://www.linkedin.com/"
+                  ><img src="./assets/icon/linkedin.png" alt="..."
+                /></a>
+              </li>
+              <li class="twitter-link">
+                <a href="https://twitter.com/"
+                  ><img src="./assets/icon/soc_tw.png" alt="..."
+                /></a>
+              </li>
+              <li class="youtube-link">
+                <a href="https://www.youtube.com/"
+                  ><img src="./assets/icon/soc_yt.png" alt="..."
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Main start -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="image">
+          <img src="./assets/images/blog-img-hero.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+          <h1 class="page-title">bloq</h1>
+        </div>
+      </section>
+      <!-- Hero end -->
+
+      <!-- Static Text start -->
+      <section class="static-text">
+        <div class="container">
+          <div class="title"><h1>DUBAYIN 10 GƏZMƏLİ YERLƏRİ</h1></div>
+        </div>
+      </section>
+      <!-- Static Text end -->
+
+      <!-- Blog Desc start -->
+      <section id="blog-desc">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 hidden-xs"></div>
+            <div class="col-md-8 col-xs-12">
+              <section class="static-image-info" style="margin-bottom: 20px">
+                <div class="image">
+                  <img
+                    src="./assets/images/blog-page-img-1.jpg"
+                    alt="Dubayın 10 gəzməli yerləri"
+                    style="border-radius: 10px"
+                    width="100%"
+                  />
+                </div>
+              </section>
+              <!--<div class="title">Dubayın 10 gəzməli yerləri</div>-->
+              <div class="text">
+                <p>
+                  <span style="font-size: medium"
+                    >Dubay sarsılmaz şərq ənənələrinin qabaqcıl memarlıq və
+                    infrastrukturu ilə ahəngdar şəkildə birləşdirən heyrətamiz
+                    şəhərdir. Futuristik metropol, "Qumdakı ərəb möcüzəsi"
+                    dünyanın heyrətamiz möcüzələrini əvvəlcədən görmək,
+                    çimərliklərdə birinci dərəcəli tətil keçirmək, unikal
+                    ticarət mərkəzlərini - alış-veriş cənnətini görmək istəyən
+                    yüz minlərlə turisti daim cəlb edir.&nbsp;</span
+                  >
+                </p>
+              </div>
+              <div class="text">
+                <p>
+                  <span style="font-size: medium"
+                    >Bu məqaləmizdə Dubayın turistik məkanları haqqında bəhs
+                    edəcəyik.</span
+                  ><br /><span style="font-size: medium"
+                    >Dünyada insanın yaratdığı “Ən”lərin harda yerləşir dedikdə
+                    ağıla ilk Dubay gəlir. Ən hündür bina, ən böyük Mall, ən
+                    böyük süni arxipelaqlar və s. Beləliklə buyurun tanış
+                    olun:</span
+                  ><br /><span style="font-size: medium"
+                    >1. SƏMANI DƏLƏN BURJ KHALIFA.</span
+                  ><br /><span style="font-size: medium"
+                    >Burj Xəlifə Qülləsi 828 metr hündürlüyü ilə Dubayın
+                    üstündən qalxaraq, yerin aşağı atmosferinin sərhəddinə
+                    yaxınlaşır. İnşası altı il çəkmiş və demək olar ki, 1,5
+                    milyard dollara başa gəlmişdir. Hətta Dubay kimi zəngin bir
+                    əmirlik bu layihəni təkbaşına maliyyələşdirə bilmədi və
+                    qonşu Abu Dabidən köməklik alıb. Nəhəng binanın içərisində
+                    yaşayış mənzilləri, otel, ofislər və ticarət mərkəzləri var.
+                    Dünyada ən yüksək hündürlükdə yerləşən restoranı
+                    “At.Mosphere” elə burada 122-ci mərtəbədə (təxminən yerdən
+                    495 metr yüksəklikdə) yerləşmişdir.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Binaya daxil olan hava təkcə soyudulmur,
+                    həmdə Bürc Xəlifə üçün xüsusi hazırlanmış ətirlə
+                    ətirlənir.<br />
+                    <img
+                      src="./assets/images/blog-page-img-2.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >2. RƏQS EDƏN MUSİQİLİ FƏVVARƏ</span
+                  ><br /><span style="font-size: medium"
+                    >Burj Khalifa göydələninin yaxınlığında 12 hektarlıq süni
+                    göldə yerləşən fəvvarə dünyanın ən böyük rəngli Musiqi
+                    fəvvarəsidir. Fontan Uitni Hyuston, Andrea Bocelli mahnıları
+                    və məşhur ərəb musiqiləri altında sayrışan rəngarəng
+                    işıqları ilə rəqs edir. Dubaya səyahət edə hər bir turist
+                    su, musiqi və işıqların ahəngi ilə əmələ gələn baş döndürən
+                    bu gözəlliyi seyr etməlidir.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Fontan səniyədə 830 000 litr suyu havaya
+                    vurur və su şırnağı 150 metr yüksəkliyə qalxa bilir
+                    (Musiqidən asılıdır)<br />
+                    <img
+                      src="./assets/images/blog-page-img-3.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >3. 24/7 GÖZƏL OLAN MARINA DUBAY.</span
+                  ><br /><span style="font-size: medium"
+                    >Gündüzü ayrı, gecəsi ayrı cazibədar olan Marina Dubay
+                    şəhərin ən canlı rayonudur. Xüsusən gün batdıqda kanalı
+                    kularının üzərinə düşən binaların işıqları, Restoranlara
+                    toplaşan insanlar, liman boyu yırğalanan bəyaz yaxtalar bir
+                    maqnit kimi insanı özünə cəlb edir. Əlbətdəki burada
+                    turistlər darıxa bilməz. Biz sizə səyahətinizi unudulmaz
+                    edəcək bir neçə məsləhət vermək istərdik.</span
+                  ><br /><span style="font-size: medium"
+                    >- Kanalda qayıqla gəzinti Marina Dubayla daha yaxından
+                    tanış olmaq üçün ən yaxşı yoldur. Rahat kreslolarda oturaraq
+                    sərinləşdirici içkilərlə gəzintilər unudulmaz olacaq.</span
+                  ><br /><span style="font-size: medium"
+                    >- Yaxınlıqdakı çimərliklərdə günəşlənmək xüusən bzim qış
+                    fəslimizdə səyahət edənlər üçün əsl yay istirahəti
+                    yaşadacaq.</span
+                  ><br /><span style="font-size: medium"
+                    >- Göydələnin yüksəkliyindən açılan mənzərəyə baxmaq
+                    keçmişdə qalıb. Amwaj Towerin damından – 170 metr
+                    yüksəklikdən başlayan Ziplayn ilə 1km-lik məsafəni saatda 60
+                    km-a çatan sürətlə enmək əsl adrenalin yaşadacaq.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Marina sözü tərcümədə Yaxt limanı mənasını
+                    verir. 2003-cü ildə inşası başlayan rayon tamamlandıqda
+                    dünyanın ən böyük yaxt limanı olması nəzərdə tutulur.<br />
+                    <img
+                      src="./assets/images/blog-page-img-4.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >4. TİCARƏT MƏRKƏZİ DUBAI MALL</span
+                  ><br /><span style="font-size: medium"
+                    >Şopoqoliklərin “cənnəti” – dünyanın ən böyük ticarət və
+                    əyləncı mərkəzi Dubay Mall Bürc Xəlifənin yaxınlığında
+                    yerləşir. 1 000 000 kvm əraziyə sahib olan Dubai Mallda
+                    dünyanın ən böyük qapalı qızıl bazarı Gold Souk, dünya
+                    bredlərinin maqazinləri olan “Moda adası” olmaqla bütünlükdə
+                    1200-dən çox maqazin yerləşmişdir. Sega Republik tematik
+                    parkı, Olimpik ölçüdə olan Buz meydançası və Böyük qız xizək
+                    mərkəzi Ski Dubai Mallın məşhur əyləncə məkanlarındandır.
+                    Ancaq Dubay Mallın əsas cazibədar məkanı əlbətdəki böyük
+                    aqvarium və sualtı zooparkdır ki, 33 000 dəniz canlısını
+                    özündə saxlayır.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Dubay Malldan gözəl bir körpü ilə Old Town
+                    Island adasına keçə bilərsiniz və buradakı tərcüməsi “Dəniz
+                    bazarı” olan ərəb adət ənənələrinə sahib Souk Al Bahar
+                    bazarına gələ bilərsiniz.<br />
+                    <img
+                      src="./assets/images/blog-page-img-5.jpg"
+                      width="100%"
+                    />
+                    <br />
+                    <img
+                      src="./assets/images/blog-page-img-6.jpg"
+                      width="50%"
+                    /><img
+                      src="./assets/images/blog-page-img-7.jpg"
+                      width="50%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >5. BİHUŞEDİCİ ƏDVİYYAT BAZARI</span
+                  ><br /><span style="font-size: medium"
+                    >Bir zamanlar Dubayın əsas ticarət mərkəzi olan Ədviyyat
+                    bazarı bugün də öz milli abu havası ilə əsl şərq bazarıdır.
+                    Müxtəlif ədviyyatlar, darçın çubuqları, zəfəran, zoğal
+                    toxumu, hibiskus ləçəkləri, otlar, köklər və quru meyvələr
+                    ətrafa insanı buhuş edən ətirlər yayır. Bu bazara baxmaqdan
+                    çox almağa gəlirlər çünki burada məhsullar pərakəndə və
+                    topdan satılıki qiymətlərin aşağı olmasına səbəb olur.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Ədviyyat bazarında məhsulların qiymətində
+                    razılaşmaq olar.<br />
+                    <img
+                      src="./assets/images/blog-page-img-8.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >6. ÇİÇƏKLİ DUBAİ MİRACLE GARDEN</span
+                  ><br /><span style="font-size: medium"
+                    >Möcüzə bağı ərazisinə görə ən böyük olmasa da 120 növdə 50
+                    milyondan çox gül ilə dünyanın ən güllü bağıdır. Bağ rəsmi
+                    olaraq 2 rekordla Ginnesin rekordlar kitabına düşüb.</span
+                  ><br /><span style="font-size: medium"
+                    >1. Güllərdən hazırlanmış original ölçülü Airbus A380
+                    superjumbo tərtibatı</span
+                  ><br /><span style="font-size: medium"
+                    >2. Mikki Mausun 18 metr hündürlüyündə və 35 ton ağırlığında
+                    olan heykəli 2018-ci ildə Ginnesin rekordlar kitabına qeyd
+                    edilib.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Güllər Dubayın isti yayına dözmədikləri
+                    üçün bağ yay fəslində bağlı olur.<br />
+                    <img
+                      src="./assets/images/blog-page-img-9.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >7. WİLD WADİ AQUAPARKI.</span
+                  ><br /><span style="font-size: medium"
+                    >Bütün ailə ilə istirahət edə biləcəyiniz böyük bir su
+                    əyləncə parkı. Ərəbistan yarımadasında ən yaxşı su parkı
+                    hesab olunur. Wild Wadi Burj Khalifa Tower yaxınlığında
+                    Jumeirah şəhər yerində. Su parkı bütün ciddi təhlükəsizlik
+                    tələblərinə uyğun qurulmuş və ən müasir avadanlıqla təchiz
+                    edilmişdir. Buranın memarlıq konsepsiyası ərəb orta əsrləri
+                    üçün stilistika şəklində həyata keçirilir. Bura bütün
+                    ailənin birlikdə əylənərək unudulmaz anlar yaşayacağı
+                    məkandır.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Aquaparka girişə yaş məhdudiyyəti
+                    olmamasına baxmayaraq boyu 110 sm-dan kiçik uşaqlar bəzi
+                    atraksionlara buraxmılmır.<br />
+                    <img
+                      src="./assets/images/blog-page-img-10.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >8. QUMSAL SƏHRADA SAFARİ.</span
+                  ><br /><span style="font-size: medium"
+                    >Dubayın ən maraqlı əyləncə növlərindən biri – yolsuzluq
+                    avtomobilləri ilə səhrada həyəcanlı ekskursiya turudur.
+                    Turun proqramı əsasən Hollivud filmlərində göründüyü kimi
+                    qızmar günəş altında, səhranın vəhşi təbiətinin aralığında
+                    sürətli hərəkət edilir. Axşam düşdündən sonra avtomobil
+                    karvanı yerlilərin kiçik kəndinə yollanır. Qədim ərəb
+                    abu-havası, ləziz təamlar və içkilər arasında turistlər
+                    özlərini nağıl personajı kimi hiss edirlər.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: İstəyə uyğun olaraq Royal, VİP, Lüks kimi
+                    safari növlərindən birini seçə bilərsiniz və hər biri
+                    özünəməxsus senarisi ilə turistərə nağıllardakı sultanların
+                    obrazını yaşadır.<br />
+                    <img
+                      src="./assets/images/blog-page-img-11.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >9. TARİXİ BASTAKİYA RAYONU.</span
+                  ><br /><span style="font-size: medium"
+                    >Bir zamanlar bu ərazidə varlı tacirlər və mirvari ovçuları
+                    yaşayırdı. Bu gün burada XIX-XX əsrlərə aid, müasir
+                    kondisionerlərin əcdadları olan otaqları sərinləmək üçün
+                    istifadə olunan məşhur "külək qüllələri" olan evləri görə
+                    bilərsiniz. Bastakiyadakı tarixi binalardan Əl Fahidi Fort,
+                    Məclis qalareyasını və ilk Beyt əl-Vahil ofis binası var.
+                    Dubayın tarixi əraziləri ilə tanış olmaq istəyirsinizsə,
+                    Bestakia, Fort al Fahidi, Köhnə Bazar və digər maraqlı olan
+                    yerlərə ekskursiyaya getməyi məsləhət görürük.<br />
+                    <img
+                      src="./assets/images/blog-page-img-12.jpg"
+                      width="100%"
+                    /> </span
+                  ><br /><span style="font-size: medium"
+                    >10. DUBAY CIDIR MEYDANI.</span
+                  ><br /><span style="font-size: medium"
+                    >“Ən”lər siyahısına aid biri daha – Dubayın Cıdır meydanı
+                    6,2 kvkm-lik əraziyə sahib olmaqla dünyanın ən böyüyüdür.
+                    Giqant meydanda keçirilən ən böyük tədbir Dubayın Dünya
+                    Kuboku keçirdilir.</span
+                  ><br /><span style="font-size: medium"
+                    >Maraqlı məlumat: Meydan ərazisində yerləşən oteldə qonaqlar
+                    öz otaqlarından at yarışlarını izləyə bilərlər.<br />
+                    <img
+                      src="./assets/images/blog-page-img-13.jpg"
+                      width="100%" />
+                    <br
+                  /></span>
+                </p>
+              </div>
+              <div class="text">
+                <input
+                  type="hidden"
+                  name="youtube"
+                  value="https://www.youtube.com/embed/OOcDb2OV-xI?rel=0&amp;showinfo=0"
+                />
+                <iframe
+                  width="100%"
+                  height="350"
+                  id="player"
+                  src="https://www.youtube.com/embed/OOcDb2OV-xI"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen=""
+                ></iframe>
+              </div>
+              <div style="height: 50px"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Blog Desc end -->
+    </main>
+    <!-- Main end -->
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="row row-cols-1 row-cols-sm-2">
+              <div class="col">
+                <div class="contacts">
+                  <div class="logo">
+                    <img
+                      src="./assets/images/logo.svg"
+                      alt="baku holiday travel"
+                    />
+                  </div>
+                  <div class="address">
+                    <div class="icon">
+                      <img src="./assets/icon/location.png" alt="" />
+                    </div>
+                    <div class="text">
+                      AZ1126 Bakı ş., Mirzə Ağa Əliyev küçəsi 210, (Winter Park
+                      Plaza, 1-ci mərtəbə)
+                    </div>
+                  </div>
+                  <div class="phone">
+                    <div class="icon">
+                      <img src="./assets/icon/phone_orange.png" alt="" />
+                    </div>
+                    <div class="text">
+                      <a href="tel:077-767-22-77">+994 77 767 22 77</a>
+                    </div>
+                  </div>
+                  <div class="email">
+                    <div class="icon">
+                      <img src="./assets/icon/mail.png" alt="" />
+                    </div>
+                    <div class="text">
+                      <a href="mailto:info@bht.az">info@bht.az</a>
+                    </div>
+                  </div>
+                  <div class="social">
+                    <ul>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/facebook.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/instagram.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/linkedin.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/soc_tw.png" alt=""
+                        /></a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><img src="./assets/icon/soc_yt.png" alt=""
+                        /></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="pages">
+                  <h2>Haqqimizda</h2>
+                  <ul>
+                    <li><a href="#">ŞİRKƏT HAQQINDA</a></li>
+                    <li><a href="#">KOMANDAMIZ</a></li>
+                    <li><a href="#">VİP XİDMƏTLƏRİ</a></li>
+                    <li><a href="#">NİYƏ BİZ?</a></li>
+                    <li><a href="#">NAİLİYYƏTLƏRİMİZ</a></li>
+                    <li><a href="#">QALEREYA</a></li>
+                    <li><a href="#">VAKANSİYALAR</a></li>
+                    <li><a href="#">ŞİKAYƏT VƏ TƏKLİF</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 d-flex flex-column">
+            <div class="subscribe">
+              <div class="heading">YENİLİKLƏRİMİZƏ ABUNƏ OL</div>
+              <div class="text">
+                Email daxil edin, ən yeni və sərfəli turlar haqda məlumat alın
+              </div>
+              <div class="form">
+                <form name="subscribe" method="post" target="_blank">
+                  <label for="mail" class="icon"
+                    ><img src="./assets/icon/mail_white.png" alt=""
+                  /></label>
+                  <input
+                    id="mail"
+                    class="email"
+                    type="email"
+                    placeholder="Email address"
+                  />
+                  <button class="button" name="subscribe" type="submit">
+                    Abunə
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="row row-cols-2">
+              <div class="col">
+                <div class="news">
+                  <div class="heading">TURİZM XƏBƏRLƏRİ</div>
+                  <div class="news-cards">
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-1.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-2.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/news-3.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BERLINƏ XÜSUSI UÇUŞLAR BAŞLAYACAQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="blog">
+                  <div class="heading">NAİLİYYƏTLƏRİMİZ</div>
+                  <div class="blog-cards">
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-1.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              DAHA BIR XARICI ƏMƏKDAŞLIQ
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-2.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              BAKU HOLIDAY TRAVEL-DƏN YENI ÜZVLÜK.
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-3">
+                      <div class="row g-0">
+                        <div class="col-md-3">
+                          <img
+                            src="./assets/images/blog-footer-3.jpg"
+                            class="img-fluid rounded-start"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="col-md-9">
+                          <div class="card-body">
+                            <h5 class="card-title">
+                              RAMIL RZAYEV AZƏRBAYCANIN UĞURLU IŞ ADAMI
+                            </h5>
+                            <p class="date">10.07.2020</p>
+                            <div class="more"><a href="#">Daha ətraflı</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="payment-copyright">
+              <div class="payment">
+                <div class="mastercard">
+                  <img src="./assets/icon/mastercard.png" alt="" />
+                </div>
+                <div class="visa">
+                  <img src="./assets/icon/visa.png" alt="" />
+                </div>
+              </div>
+              <div class="copyright">
+                &copy;2022 Bütün hüquqlar qorunur. Baku Holiday Travel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Axios Js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Link jQuery's JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link Owl Carousel's JS -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owlCaousel.js"></script>
+    <!-- Link Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- JavaScript here -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

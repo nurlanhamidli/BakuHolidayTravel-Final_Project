@@ -1,0 +1,312 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Baku Holiday Travel - Daxili və Xarici Turlar online alışı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int count = 0;
+}
+
+<!-- Main start -->
+<main>
+    <!-- Slider start -->
+    <section id="slider">
+        <div id="carouselExampleControls"
+             class="carousel slide"
+             data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (var i = 0; i < Model.sliders.Count(); i++)
+                {
+                    if (Model.sliders[i].Type == 0)
+                    {
+                        if (count == 0)
+                        {
+                            <div class="carousel-item active">
+                                <div class="image"
+                         style="
+                              height: 100%;
+                              overflow: hidden;
+                              width: 100%;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-position: center;
+                            ">
+                                    <img src="~/uploads/slider/@Model.sliders[i].ImgUrl"
+                             class="d-block w-100 slider-img"
+                             alt="..." />
+                                    <div class="slider-content">
+                                        <h1 class="slider-title">@Model.sliders[i].Title</h1>
+                                        <p class="slider-subtitle">@Model.sliders[i].Description</p>
+                                        <a href="@Model.sliders[i].Link" class="slider-btn">
+                                            <img src="~/assets/icon/location_white.png"
+                                     alt=""
+                                     class="slider-btn-icon" />daha ətraflı
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="carousel-item">
+                                <div class="image"
+                         style="
+                  height: 100%;
+                  overflow: hidden;
+                  width: 100%;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center;
+                ">
+                                    <img src="~/uploads/slider/@Model.sliders[i].ImgUrl"
+                             class="d-block w-100 slider-img"
+                             alt="..." />
+                                    <div class="slider-content">
+                                        <h1 class="slider-title">@Model.sliders[i].Title</h1>
+                                        <p class="slider-subtitle">@Model.sliders[i].Description</p>
+                                        <a href="@Model.sliders[i].Link" class="slider-btn">
+                                            <img src="~/assets/icon/location_white.png"
+                                     alt=""
+                                     class="slider-btn-icon" />daha ətraflı
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        count++;
+                    }
+                }
+            </div>
+            <button class="carousel-control-prev h-25"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                    style="top: 40%">
+                <span aria-hidden="true">
+                    <img src="~/assets/icon/arrow-left.png" alt="" />
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next h-25"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                    style="top: 40%">
+                <span aria-hidden="true">
+                    <img src="~/assets/icon/arrow-right.png" alt="" />
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- Slider end -->
+
+    <!-- Certificate start -->
+    <section id="certificate">
+        <div class="container">
+            <div class="title">
+                <h2>
+                    BIZ REGIONAL EKSPERTLƏR VƏ QLOBAL TURIZM ICTIMAIYYƏTINDƏ TANINMIŞ
+                    TƏRƏFDAŞIQ.
+                </h2>
+            </div>
+            <div class="owl-carousel certificate owl-theme">
+                @foreach (var certificate in Model.certificates)
+                {
+                    <div class="item">
+                        <img src="~/assets/images/@certificate.ImgUrl" alt="" />
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- Certificate end -->
+
+    <!-- Foreign Tours start -->
+    <section id="foreign-tours" class="tours carousel-tours">
+        <div class="container">
+            <div class="title"><h1>xarici turlar</h1></div>
+            <div class="subtitle">
+                <p>Baku Holiday Travel-dən ən son xarici turlar</p>
+            </div>
+            <div class="row row-cols-lg-4 row-cols-md-2 g-3">
+                @foreach (var item in Model.ForeignTours)
+                {
+                        <div class="col item">
+                            <div class="card h-100">
+                                <img src="~/uploads/tour/@item.ImgUrl"
+                             class="card-img-top tours-img"
+                             alt="..." />
+                                <div class="tour-content">
+                                    <h5 class="title">@item.Title</h5>
+                                    <p class="price">qiymət: <span>$@item.Price</span></p>
+                                    <div class="bottom">
+                                        <p class="date">
+                                            <img src="~/assets/icon/calendar.png" alt="" /> @item.TourDate
+                                        </p>
+                                        <a href="#" class="more-detailed">daha ətrafli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                }
+                
+            </div>
+        </div>
+    </section>
+    <!-- Foreign Tours end -->
+
+    <!-- Group Tours start -->
+    <section id="group-tours" class="tours carousel-tours">
+        <div class="container">
+            <div class="title"><h1>qrup turlari</h1></div>
+            <div class="subtitle">
+                <p>Baku Holiday Travel-dən Qrup tur paketləri</p>
+            </div>
+            <div class="row row-cols-lg-4 row-cols-md-2 g-3">
+                @foreach (var item in Model.QrupTours)
+                {
+                        <div class="col item">
+                            <div class="card h-100">
+                                <img src="~/uploads/tour/@item.ImgUrl"
+                             class="card-img-top tours-img"
+                             alt="..." />
+                                <div class="tour-content">
+                                    <h5 class="title">@item.Title</h5>
+                                    <p class="price">qiymət: <span>$@item.Price</span></p>
+                                    <div class="bottom">
+                                        <p class="date">
+                                            <img src="~/assets/icon/calendar.png" alt="" /> @item.TourDate
+                                        </p>
+                                        <a href="#" class="more-detailed">daha ətrafli</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- Group Tours end -->
+
+    <!-- Places start -->
+    <section id="places">
+        <div class="title"><h1>ən yaxşı səyahət yerləri</h1></div>
+        <div class="subtitle">
+            <p>2022-ci ildə səyahət üçün ən maraqlı məkanlar</p>
+        </div>
+        <div class="places">
+            <ul class="place-ul row row-cols-lg-3 row-cols-md-2 ">
+                @foreach (var place in Model.places)
+                {
+                <li class="col item">
+                    <a>
+                        <div class="place-item">
+                            <img src="~/assets/images/@place.ImgUrl"
+                                 alt=""
+                                 class="image" />
+                            <h3 class="title">@place.Name</h3>
+                            <div class="temperature">
+                                <img src="~/assets/icon/temperature.png" alt="" />
+                                <p class="ctry-temp">
+                                    <span>@place.Latitude</span>
+                                    <span>@place.Longitude</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+    </section>
+    <!-- Places end -->
+
+    <!-- Cruise start -->
+    <section id="cruise">
+        <div class="title"><h1>kruiz</h1></div>
+        <div class="subtitle">
+            <p>Baku Holiday Travel-dən Kruiz tur paketləri</p>
+        </div>
+        <div class="swiper mySwiper">
+            <ul class="swiper-wrapper">
+                @foreach (var item in Model.KruizTours)
+                {
+                        <li class="swiper-slide">
+                            <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id">
+                                <div class="image">
+                                    <img src="~/uploads/tour/@item.HeroImgUrl" alt="..." />
+                                </div>
+                                <div class="info">
+                                    <div class="price">Qiymət: <span>$@item.Price</span></div>
+                                    <div class="rating">
+                                        <img src="~/assets/icon/rating.png" alt="" />
+                                        <img src="~/assets/icon/rating.png" alt="" />
+                                        <img src="~/assets/icon/rating.png" alt="" />
+                                        <img src="~/assets/icon/rating.png" alt="" />
+                                        <img src="~/assets/icon/rating.png" alt="" />
+                                    </div>
+                                    <h3 class="title">@item.Title</h3>
+                                    <p class="date">
+                                        <img src="~/assets/icon/calendar.png" alt="" /> @item.TourDate
+                                    </p>
+                                    <p class="subtitle">Bu səyahət möhtəşəm olacaq</p>
+                                </div>
+                            </a>
+                        </li>
+                }
+                
+            </ul>
+            <div class="swiper-button-next">
+                <img src="~/assets/icon/arrow-right.png" alt="" />
+            </div>
+            <div class="swiper-button-prev">
+                <img src="~/assets/icon/arrow-left.png" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- Cruise end -->
+
+    <!-- Featured start -->
+    <section id="featured" class="tours">
+        <div class="container">
+            <div class="title"><h1>XÜSUSİ TƏKLİFLƏR</h1></div>
+            <div class="subtitle">
+                <p>
+                    Daha çox xüsusi təkliflərlə tanış olmaq üçün bizimlə əlaqə
+                    saxlayın
+                </p>
+            </div>
+            <div class="featured-slider">
+                <div class="owl-carousel owl-theme owl-featured">
+                    @foreach (var item in Model.FeaturedTours)
+                    {
+                            <div class="item">
+                                <div class="card h-100">
+                                    <img src="~/uploads/tour/@item.ImgUrl"
+                                 class="card-img-top tours-img"
+                                 alt="..." />
+                                    <div class="tour-content">
+                                        <div class="rating">
+                                            <img src="~/assets/icon/rating.png" alt="" />
+                                            <img src="~/assets/icon/rating.png" alt="" />
+                                            <img src="~/assets/icon/rating.png" alt="" />
+                                            <img src="~/assets/icon/rating.png" alt="" />
+                                            <img src="~/assets/icon/rating.png" alt="" />
+                                        </div>
+                                        <h5 class="title">@item.Title</h5>
+                                        <div class="bottom">
+                                            <p class="date">
+                                                <img src="~/assets/icon/calendar.png" alt="" /> @item.TourDate
+                                            </p>
+                                            <a asp-controller="tour" asp-action="detail" asp-route-id="@item.Id" class="more-detailed">daha ətrafli</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured end -->
+</main>
+<!-- Main end -->

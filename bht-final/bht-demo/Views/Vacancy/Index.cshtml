@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Vacancy>
+
+<!-- Main start -->
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="./assets/images/gallery-hero-img.png" alt="bht" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">VAKANSİYALAR</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title">
+                <h1>ŞİRKƏTİMİZDƏ MÖVCUD OLAN İŞ ELANLARI</h1>
+            </div>
+            <div class="subtitle">
+                <p>Turizm sahəsində peşəkar komandaya üzvlük</p>
+            </div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Vacancy start -->
+    <section id="vacancy">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul class="vacancy-list">
+                        <li class="vacancy-title">
+                            <ul class="vacancy-entry">
+                                <li>POZİSİYA</li>
+                                <li>ŞƏHƏR</li>
+                                <li>ŞÖBƏ</li>
+                                <li>BİTMƏ TARİXİ</li>
+                            </ul>
+                        </li>
+                        @foreach (var item in Model)
+                        {
+                        <li class="vacancy-item">
+                            <ul class="vacancy-entry">
+                                <li>@item.Position</li>
+                                <li>@item.City</li>
+                                <li>@item.Department</li>
+                                <li>@item.EndDate</li>
+                            </ul>
+                            <div class="vacancy-inner">
+                                @Html.Raw(item.Content)
+                            </div>
+                        </li>
+                        }
+                    </ul>
+                </div>
+                <!--/.col -->
+                <div class="col-md-4">
+                    <div class="registration">
+                        <div class="title">BAŞLIQ</div>
+                        <div class="text">
+                            Baku Holiday Travel şirkətində mövcud vakansiyalar üzrə
+                            müraciət etməklə Turizm sahəsində uğurlu olan BHT ailəsinə üzv
+                            olmaq şansı əldə edirsiniz.
+                        </div>
+                        <div class="email">
+                            <a href="mailto:online@bht.az">
+                                <div class="icon">
+                                    <img src="./assets/icon/static_mail.png" alt="" />
+                                </div>
+                                <span>online@bht.az</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--/.col -->
+            </div>
+        </div>
+    </section>
+    <!-- Vacancy end -->
+</main>
+<!-- Main end -->
+

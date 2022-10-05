@@ -1,0 +1,118 @@
+.title h1 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: black;
+  line-height: 39px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #b8b9b9;
+  line-height: 18px;
+  text-align: center;
+}
+
+.more-detailed {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 31px;
+  color: #fff;
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 15px;
+  padding: 0 0.875rem;
+  transition: all 0.5s;
+}
+.more-detailed:hover {
+  background-color: transparent;
+  color: var(--primary);
+  transition: all 0.5s;
+}
+
+.tours .card, .az-tours .card {
+  border: none;
+  border-radius: 10px;
+}
+.tours .card .tours-img, .az-tours .card .tours-img {
+  position: relative;
+  border-radius: 10px;
+  filter: brightness(75%);
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.tours .card .tour-content, .az-tours .card .tour-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 1.8rem;
+}
+.tours .card .tour-content .title, .az-tours .card .tour-content .title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0.625rem 0;
+  margin: 0;
+}
+.tours .card .tour-content .price, .az-tours .card .tour-content .price {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 0.3125rem 0;
+}
+.tours .card .tour-content .bottom, .az-tours .card .tour-content .bottom {
+  position: absolute;
+  bottom: 1.25rem;
+  text-align: center;
+}
+.tours .card .tour-content .bottom .date, .az-tours .card .tour-content .bottom .date {
+  display: flex;
+  align-items: center;
+  font-size: 0.625rem;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 1rem 1rem;
+}
+.tours .card .tour-content .bottom .date img, .az-tours .card .tour-content .bottom .date img {
+  width: 15px;
+  height: 15px;
+}
+.tours .card:hover .tours-img, .az-tours .card:hover .tours-img {
+  filter: brightness(35%);
+  transition: all 0.3s;
+}
+.tours .card:hover .title, .az-tours .card:hover .title {
+  color: var(--primary);
+}
+
+.more-cards {
+  text-align: center;
+  margin-top: 3rem;
+}
+.more-cards button {
+  color: var(--primary);
+  font-size: 0.75rem;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--primary);
+}

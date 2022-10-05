@@ -1,0 +1,64 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+
+@model IPagedList<Vacancy>
+
+@{
+    ViewData["Title"] = "Vakansiyalar";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="container">
+    <h1>Vacancy</h1>
+    <a asp-action="create" class="btn btn-warning">Yeni Vakansiya</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Count</th>
+                <th scope="col">POZİSİYA</th>
+                <th scope="col">ŞƏHƏR</th>
+                <th scope="col">ŞÖBƏ</th>
+                <th scope="col">
+                    BİTMƏ TARİXİ
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.Position</td>
+                    <td>@item.City</td>
+                    <td>@item.Department</td>
+                    <td>@item.EndDate</td>
+                    <td><a asp-controller="vacancy" asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Redaktə et</a> </td>
+                    @if (item.IsDeleted == false)
+                    {
+                        <td><a asp-controller="vacancy" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="vacancy" class="btn btn-danger delete-btn">Deaktiv et</a></td>
+                    }
+                    @if (item.IsDeleted == true)
+                    {
+                        <td><a asp-controller="vacancy" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="vacancy" class="btn btn-primary delete-btn">Aktiv</a></td>
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center mt-4">
+        <div>
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page }),
+            new PagedListRenderOptions {
+            LiElementClasses = new string[] { "page-item" },
+            PageClasses = new string[] { "page-link" }
+            }
+            )
+        </div>
+    </div>
+</div>
+

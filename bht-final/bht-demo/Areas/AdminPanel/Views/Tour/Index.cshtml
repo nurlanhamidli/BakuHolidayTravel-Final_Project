@@ -1,0 +1,61 @@
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList
+@using X.PagedList.Web.Common
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+@model IPagedList<Tours>
+
+<div class="container">
+    <h1>Turlar</h1>
+    <a asp-action="create" class="btn btn-warning">Yeni Tur</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Count</th>
+                <th scope="col">Şəkil</th>
+                <th scope="col">Başlıq</th>
+                <th scope="col">Qiymət</th>
+                <th scope="col">Turun Tarixi</th>
+                <th scope="col">Kateqoriya</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td class="p-0"><img style="width:100px;height:70px; border-radius:5px;" src="~/uploads/tour/@item.ImgUrl" /></td>
+                    <td>@item.Title</td>
+                    <td>$@item.Price</td>
+                    <td>@item.TourDate</td>
+                    <td>@item.Category.Name</td>
+                    <td><a asp-controller="tour" asp-action="Update" asp-route-id="@item.Id" class="btn btn-success">Redaktə et</a> </td>
+                    @if (item.IsDeleted == false)
+                    {
+                        <td><a asp-controller="Tour" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="tour" class="btn btn-danger delete-btn">Deaktiv et</a></td>
+                    }
+                    @if (item.IsDeleted == true)
+                    {
+                        <td><a asp-controller="Tour" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id" data-name="tour" class="btn btn-primary delete-btn">Aktiv</a></td>
+                    }
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div class="d-flex justify-content-center mt-4">
+        <div>
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page }),
+            new PagedListRenderOptions {
+            LiElementClasses = new string[] { "page-item" },
+            PageClasses = new string[] { "page-link" }
+            }
+            )
+        </div>
+    </div>
+</div>

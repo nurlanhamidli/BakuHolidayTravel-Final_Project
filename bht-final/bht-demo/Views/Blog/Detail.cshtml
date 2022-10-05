@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Blogs
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="image">
+            <img src="~/assets/images/blog-img-hero.jpg" alt="bht - turlar" />
+        </div>
+        <div class="info">
+            <h1 class="page-title">bloq</h1>
+        </div>
+    </section>
+    <!-- Hero end -->
+    <!-- Static Text start -->
+    <section class="static-text">
+        <div class="container">
+            <div class="title"><h1>@Model.Title</h1></div>
+        </div>
+    </section>
+    <!-- Static Text end -->
+    <!-- Blog Desc start -->
+    <section id="blog-desc">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 hidden-xs"></div>
+                <div class="col-md-8 col-xs-12">
+                    <section class="static-image-info" style="margin-bottom: 20px">
+                        <div class="image">
+                            <img src="~/uploads/blog/@Model.DetailImgUrl"
+                                 alt="..."
+                                 style="border-radius: 10px"
+                                 width="100%" />
+                        </div>
+                    </section>
+                    <div class="text">@Html.Raw(Model.Content)</div>
+            
+                    <div style="height: 50px"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Desc end -->
+</main>
+
